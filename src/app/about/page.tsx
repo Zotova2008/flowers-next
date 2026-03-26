@@ -1,4 +1,5 @@
 import {Award, Heart, Leaf, Users} from 'lucide-react';
+import {basePath} from "@/lib/data";
 
 export default function AboutPage() {
 	const values = [
@@ -46,7 +47,7 @@ export default function AboutPage() {
 						<div className="relative">
 							<div className="aspect-[4/5] rounded-3xl overflow-hidden">
 								<img
-									src="/images/about.jpg"
+									src={`${basePath}/images/about.jpg`}
 									alt="Наша мастерская"
 									className="w-full h-full object-cover"
 								/>

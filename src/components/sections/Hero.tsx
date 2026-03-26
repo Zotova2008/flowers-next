@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import {ArrowRight, Award, Clock, Truck} from 'lucide-react';
+import {basePath} from "@/lib/data";
 
 export default function Hero() {
 	return (
@@ -59,7 +60,7 @@ export default function Hero() {
 					<div className="relative hidden lg:block">
 						<div className="relative rounded-3xl overflow-hidden shadow-2xl">
 							<img
-								src="/images/first-screen.jpg"
+								src={`${basePath}/images/first-screen.jpg`}
 								alt="Букет цветов"
 								className="w-full h-[600px] object-cover"
 							/>

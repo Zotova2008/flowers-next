@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import {useState} from 'react';
 import {Menu, Phone, ShoppingBag, X} from 'lucide-react';
-import {categories} from '@/lib/data';
+import {basePath, categories} from '@/lib/data';
 import {useCart} from '@/lib/cart-context';
 import {usePathname} from "next/navigation";
 import Image from 'next/image';
@@ -17,7 +17,8 @@ export default function Header() {
 	const LogoContent = () => (
 		<div className="flex items-center gap-2">
 			<div className="w-10 h-10 relative">
-				<Image src="/images/favicons/favicon.svg" alt="Blooming Heart" fill className="object-contain"/>
+				<Image src={`${basePath}/images/favicons/favicon.svg`} alt="Blooming Heart" fill
+				       className="object-contain"/>
 			</div>
 			<span className="font-serif text-2xl font-bold text-stone-900">
                 Blooming Heart

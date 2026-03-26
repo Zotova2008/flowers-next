@@ -1,5 +1,6 @@
 import {Category, Product} from "@/types";
 
+export const basePath = process.env.BASE_PATH || '';
 
 export const categories: Category[] = [
 	{
@@ -7,28 +8,28 @@ export const categories: Category[] = [
 		name: 'Букеты',
 		slug: 'bouquets',
 		description: 'Классические и авторские букеты из свежих цветов',
-		image: '/images/first-screen.jpg',
+		image: `${basePath}/images/first-screen.jpg`,
 	},
 	{
 		id: '2',
 		name: 'Композиции',
 		slug: 'compositions',
 		description: 'Цветочные композиции в коробках и корзинах',
-		image: '/images/catalog-2.jpg'
+		image: `${basePath}/images/catalog-2.jpg`
 	},
 	{
 		id: '3',
 		name: 'Поздравления',
 		slug: 'congratulations',
 		description: 'Праздничные цветочные наборы с открытками',
-		image: '/images/catalog-3.jpg'
+		image: `${basePath}/images/catalog-3.jpg`
 	},
 	{
 		id: '4',
 		name: 'Цветы в горшках',
 		slug: 'potted',
 		description: 'Комнатные растения и цветы в декоративных горшках',
-		image: '/images/catalog-4.jpg'
+		image: `${basePath}/images/catalog-4.jpg`
 	}
 ];
 
@@ -38,7 +39,7 @@ export const products: Product[] = [
 		name: 'Розовое Облако',
 		category: 'bouquets',
 		price: 3500,
-		image: '/images/product-1.jpg',
+		image: `${basePath}/images/product-1.jpg`,
 		description: 'Нежный букет из розовых пионов и эустомы.',
 		composition: ['Пионы - 5 шт', 'Эустома - 3 шт'],
 		inStock: true,
@@ -50,7 +51,7 @@ export const products: Product[] = [
 		name: 'Солнечный Свет',
 		category: 'bouquets',
 		price: 2800,
-		image: '/images/product-2.jpg',
+		image: `${basePath}/images/product-2.jpg`,
 		description: 'Яркий букет из подсолнухов.',
 		composition: ['Подсолнухи - 7 шт'],
 		inStock: true,
@@ -62,7 +63,7 @@ export const products: Product[] = [
 		name: 'Королевская Ночь',
 		category: 'compositions',
 		price: 5500,
-		image: '/images/product-3.jpg',
+		image: `${basePath}/images/product-3.jpg`,
 		description: 'Роскошная композиция из красных роз.',
 		composition: ['Розы - 25 шт'],
 		inStock: true,
@@ -74,7 +75,7 @@ export const products: Product[] = [
 		name: 'Весенний Микс',
 		category: 'compositions',
 		price: 3200,
-		image: '/images/product-4.jpg',
+		image: `${basePath}/images/product-4.jpg`,
 		description: 'Разноцветная композиция.',
 		composition: ['Тюльпаны', 'Нарциссы'],
 		inStock: true,
@@ -86,7 +87,7 @@ export const products: Product[] = [
 		name: 'Монстера',
 		category: 'potted',
 		price: 2500,
-		image: '/images/product-5.jpg',
+		image: `${basePath}/images/product-5.jpg`,
 		description: 'Модное растение для интерьера.',
 		composition: ['Монстера 80см', 'Горшок керамика'],
 		inStock: true,
@@ -98,7 +99,7 @@ export const products: Product[] = [
 		name: 'Орхидея',
 		category: 'potted',
 		price: 4200,
-		image: '/images/product-6.jpg',
+		image: `${basePath}/images/product-6.jpg`,
 		description: 'Элегантная белая орхидея.',
 		composition: ['Орхидея', 'Кашпо стекло'],
 		inStock: true,

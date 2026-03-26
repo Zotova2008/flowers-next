@@ -1,9 +1,14 @@
 /** @type {import('next').NextConfig} */
+const isProd = process.env.NODE_ENV === 'production';
+
 const nextConfig = {
 	output: 'export',
 	distDir: 'dist',
-	basePath: process.env.NODE_ENV === 'production' ? '/flowers-next' : '',
-	assetPrefix: '/flowers-next',
+	basePath: isProd ? '/flowers-next' : '',
+	assetPrefix: isProd ? '/flowers-next' : '',
+	env: {
+		BASE_PATH: isProd ? '/flowers-next' : '',
+	},
 	images: {
 		unoptimized: true,
 	},

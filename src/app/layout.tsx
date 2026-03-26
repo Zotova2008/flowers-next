@@ -5,6 +5,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import {CartProvider} from "@/lib/cart-context";
 import React from "react";
+import {basePath} from "@/lib/data";
 
 const playfair = Playfair_Display({
 	subsets: ["latin", "cyrillic"],
@@ -23,15 +24,15 @@ export const metadata: Metadata = {
 	description: "Премиальные букеты и цветочные композиции с доставкой",
 	icons: {
 		icon: [
-			{url: '/images/favicons/favicon-96x96.png', sizes: '96x96', type: 'image/png'},
-			{url: '/images/favicons/favicon.svg', type: 'image/svg+xml'},
+			{url: `${basePath}/images/favicons/favicon-96x96.png`, sizes: '96x96', type: 'image/png'},
+			{url: `${basePath}/images/favicons/favicon.svg`, type: 'image/svg+xml'},
 		],
-		shortcut: '/images/favicons/favicon.ico',
+		shortcut: `${basePath}/images/favicons/favicon.ico`,
 		apple: [
-			{url: '/images/favicons/apple-touch-icon.png', sizes: '180x180'},
+			{url: `${basePath}/images/favicons/apple-touch-icon.png`, sizes: '180x180'},
 		],
 	},
-	manifest: '/images/favicons/site.webmanifest',
+	manifest: `${basePath}/images/favicons/site.webmanifest`,
 	appleWebApp: {
 		title: 'Blooming Heart',
 	},
