@@ -21,7 +21,7 @@ export default function ProductCard({product}: Props) {
 
 	return (
 		<div
-			className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-stone-100">
+			className="grid grid-cols-1 grid-rows-[auto_1fr] group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-stone-100">
 			<Link href={`/products/${product.id}`}>
 				<div className="relative aspect-square overflow-hidden bg-stone-100">
 					<img
@@ -44,7 +44,7 @@ export default function ProductCard({product}: Props) {
 				</div>
 			</Link>
 
-			<div className="p-5">
+			<div className="p-5 flex flex-col">
 				<div className="flex items-center gap-1 mb-2">
 					<Star className="w-4 h-4 text-yellow-400 fill-yellow-400"/>
 					<span className="text-sm text-stone-600">{product.rating}</span>
@@ -62,7 +62,7 @@ export default function ProductCard({product}: Props) {
 					{product.description}
 				</p>
 
-				<div className="flex items-center justify-between">
+				<div className="flex items-center justify-between mt-auto">
 					<div className="flex items-center gap-3">
             <span className="text-xl font-bold text-stone-900">
               {product.price.toLocaleString('ru-RU')} ₽

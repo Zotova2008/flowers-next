@@ -22,7 +22,7 @@ export default function Hero() {
 							Доставка за 2 часа по Москве.
 						</p>
 						<div className="flex flex-col sm:flex-row gap-4">
-							<Link href="/bouquets"
+							<Link href="/products"
 							      className="inline-flex items-center justify-center gap-2 bg-rose-600 text-white px-8 py-4 rounded-full font-medium hover:bg-rose-700 transition-all">
 								Смотреть каталог
 								<ArrowRight className="w-5 h-5"/>
